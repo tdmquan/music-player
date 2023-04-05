@@ -1,0 +1,248 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Trirong", serif;
+}
+:root{
+    --titlecolor:#3a8b9b;
+}
+body{
+    min-height: 400vh;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.8),rgba(0,0,0,0.6)), url('../material/background.jpg') no-repeat center/cover;
+}
+.wrap{
+    padding: 10px 150px;
+    height: 100%;
+}
+.content-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 200px;
+    background-color: transparent;
+    color:rgba(255,255,255,0.8);
+    width: 100%;
+}
+.content-top_artword{
+    font-family: "Audiowide", sans-serif;
+    font-size: 65px;
+    line-height: 1;
+    font-weight: bold;
+    text-align: center;
+    width: 40px;
+    text-shadow: 1px 3px 1px rgba(255,255,255,0.4);
+}
+.content-top_menu{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    min-height: 100px;
+    font-size: 20px;
+}
+.content-top_menu span:hover{
+    cursor: pointer;
+    color:var(--titlecolor);
+    transition: 0.4s;
+}
+.content-body{
+    color:rgba(255,255,255,0.8);
+    width: 70%;
+}
+.content-body_description_title{
+    font-size: 35px;
+    width: 60%;
+}
+.content-body_description_body{
+    margin-top: 15px;
+    font-size: 15px;
+}
+.content-body_description_body p{
+    line-height: 1.5;
+    letter-spacing: 2;
+}
+.content-body_download{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.content-body_download button{
+    border:none;
+    outline: none;
+    padding:10px 20px;
+    font-size: 25px;
+    color:white;
+    border-radius: 3px;
+    background: #014958;
+    box-shadow:4px 5px 4px rgba(0,0,0,0.7);
+    transition: 0.6s;
+}
+.content-body_download button:hover{
+    background: rgba(255,255,255,0.8);
+    color:#014958;
+    cursor: pointer;
+    transform: scaleX(1.2);
+    transform: scaleY(1.2);
+    font-size: 27px;
+    box-shadow:4px 5px 4px rgba(#014958,#014958,#014958);
+    transition: 0.6s;
+}
+.content-bottom{
+    margin-top: 15px;
+    font-size: 20px;
+    color:rgba(255,255,255,0.8);
+    display: flex;
+    justify-content: space-between;
+}
+.content-bottom span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-bottom span div{
+    font-size: 25px;
+    font-weight: lighter;
+}
+.content-bottom span i{
+    margin-top:15px;
+    color:rgba(255,255,255,0.8);
+     font-size: 150px; 
+}
+/* ------------------------------------------------ABOUT US CSS-----------------------------------------------*/
+.about_us{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.about_us-content{
+    display: flex;
+}
+.about_us-title{
+    font-size: 60px;
+    line-height: 0.8;
+    font-weight: bold;
+    text-align: center;
+    color:white;
+    text-shadow: 1px 3px 1px rgba(255,255,255,0.3);
+}
+.card{
+    margin:40px auto;
+    height: 450px;
+    width: 320px;
+    background:linear-gradient(to bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.5));
+    border: none;
+    border-radius: 10px;
+    color:white;
+    overflow: hidden;
+
+}
+.card_image{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border:#014958 solid 4px;
+    overflow: hidden;
+    margin:25px auto;
+    transition: 300ms;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.card_name{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.card_level{
+    font-size: 18px;
+    color:var(--titlecolor);
+    text-align: center;
+}
+.card_contact{
+    margin:30px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.card_contact span{
+    font-size: 25px;
+}
+.contactBtn{
+    text-align: center;
+}
+.contactBtn button{
+    border-radius: 8px;
+    font-size: 14px;
+    border: var(--titlecolor) 2px solid;
+    color:white;
+    padding:12px 24px;
+    background-color: #242628;
+    transition: 300ms;
+}
+.contactBtn button:hover{
+    background-color: var(--titlecolor);
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:white;
+    transition: 200ms;
+}
+a:hover{
+    cursor: pointer;
+    color:var(--titlecolor)
+}
+.card_image:hover{
+    width: 100%;
+    height: 100%;
+    border:none;
+    border-radius: unset;
+    margin:0 auto;
+}
+/* ------------------------------------------------INTRODUCTION CSS-----------------------------------------------*/
+.introduction{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    color:white;
+}
+.introduction-title{
+    font-size: 60px;
+    line-height: 0.8;
+    font-weight: bold;
+    text-align: center;
+    color:white;
+    text-shadow: 1px 3px 1px rgba(255,255,255,0.3);
+}
+.introduction-step{
+    height: fit-content;
+    margin-top:60px;
+    padding:20px auto;
+}
+.introduction-step div{
+    position: relative;
+    height: 350px;
+}
+.introduction-step div span{
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px rgba(255,255,255,0.2);
+}
+.introduction-step div:nth-child(odd){
+    background:linear-gradient(to right,rgba(0,0,0,0.6),rgba(255,255,255,0.2));
+}
+.introduction-step div:nth-child(even){
+    background:linear-gradient(to left,rgba(0,0,0,0.6),rgba(255,255,255,0.2));
+}
+.introduction-step div:nth-child(even) span{
+   top: 15px;
+   right: 15px;
+}
+.introduction-step div:nth-child(odd) span{
+    top: 15px;
+    left: 15px;
+ }
