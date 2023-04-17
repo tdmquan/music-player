@@ -4,12 +4,18 @@
     box-sizing: border-box;
     font-family: "Trirong", serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 :root{
     --titlecolor:#3a8b9b;
 }
 body{
+    position:relative;
     min-height: 400vh;
-    background: linear-gradient(to bottom,rgba(0,0,0,0.8),rgba(0,0,0,0.6)), url('../material/background.jpg') no-repeat center/cover;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.8),rgba(0,0,0,0.6)), url('./material/background.jpg') no-repeat center/cover;
 }
 .wrap{
     padding: 10px 150px;
@@ -36,11 +42,11 @@ body{
 .content-top_menu{
     display: flex;
     justify-content: space-between;
-    width: 400px;
+    width: 500px;
     min-height: 100px;
     font-size: 20px;
 }
-.content-top_menu span:hover{
+.content-top_menu a:hover{
     cursor: pointer;
     color:var(--titlecolor);
     transition: 0.4s;
@@ -246,3 +252,47 @@ a:hover{
     top: 15px;
     left: 15px;
  }
+ /*--------------------------------------------FOOTER CSS-------------------------------------------*/
+ .footer{
+    height: 300px;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    color:white;
+    padding:25px 15px;
+    background:linear-gradient(to bottom,rgba(0,0,0,0.6),rgba(255,255,255,0.3));
+    justify-content: space-between;
+ }
+ .teamInfo{
+    width: 30%;
+ }
+ .teamInfo-name{
+    width: 30%;
+    font-family: "Audiowide", sans-serif;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: bold;
+    text-align: center;
+    width: 40px;
+    text-shadow: 1px 3px 1px rgba(255,255,255,0.4);
+ }
+ .teamInfo-info{
+    font-size: 14px;
+ }
+ .webInfo-all{
+    display: flex;
+    margin-top: 35px;
+    flex-direction: column;
+ }
+ .webInfo-all div{
+    font-size: 30px;
+ }
+.contactInfo{
+    padding-top:35px;
+    width: 30%;
+}
+.contactInfo-name{
+    font-size: 30px;
+}

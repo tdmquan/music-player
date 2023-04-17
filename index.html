@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Weather</title>
+<title>ALLYOURMUSIC</title>
 <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
@@ -13,14 +13,15 @@
 <!-----------------------------------------LANDING PAGE HTML----------------------------------------------->
     <div class="content">
         <div class="content-top">
-                <div class="content-top_artword">
+                <div class="content-top_artword" id="home">
                     ALL YOUR MUSIC
                 </div>
                 <div class="content-top_menu">
-                    <span>Home</span>
-                    <span>Download</span>
-                    <span>Contact</span>
-                    <span>Introduction</span>
+                    <a href="#">Home</a>
+                    <a href="#downloadid">Download</a>
+                    <a href="#aboutusid">About us</a>
+                    <a href="#contactid">Contact</a>
+                    <a href="#introductionid">Introduction</a>
                 </div>
         </div>
         <div class="content-body">
@@ -37,8 +38,8 @@
                     </p>
                 </div>
 
-                <div class="content-body_download">
-                    <button>Download Now</button>
+                <div id="downloadid" class="content-body_download">
+                    <button onclick="window.location.href='music-player.rar'">Download Now</button>
                 </div>
         </div>
         <div class="content-bottom">
@@ -46,6 +47,7 @@
                 <div>
                     Discover and download app
                 </div>
+                
                 <i class="far fa-arrow-alt-circle-down"></i>
             </span>
             <span>
@@ -63,12 +65,12 @@
         </div>
     </div>  
     <!--------------------------------------------------ABOUT US HTML------------------------------------------------------>
-    <div class="about_us">
+    <div id="aboutusid" class="about_us">
         <div class="about_us-title"> About Us</div>
         <div class="about_us-content">
         <div class="card">
             <div class="card_image">
-              <img src="../material/avatar.jpg" alt="">
+              <img src="./material/avatar.jpg" alt="">
             </div>
             <div class="card_name">Thanh Phuc</div>
             <div class="card_level">Junior at SGU</div>
@@ -91,13 +93,13 @@
             </div>
         </div><div class="card">
             <div class="card_image">
-              <img src="../material/nghia.jpg" alt="">
+              <img src="./material/nghia.jpg" alt="">
             </div>
             <div class="card_name">Kien Nghia</div>
             <div class="card_level">Junior at SGU</div>
             <div class="card_contact">
                 <span>
-                    <a href="https://www.facebook.com/profile.php?id=100009833357572" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/KimiVermilion" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 </span>
                 <span>
                     <a target="_blank"><i class="fab fa-instagram"></i></a>
@@ -114,13 +116,13 @@
             </div>
         </div><div class="card">
             <div class="card_image">
-              <img src="../material/avatar.jpg" alt="">
+              <img src="./material/quan.jpg" alt="">
             </div>
             <div class="card_name">Manh Quan</div>
             <div class="card_level">Junior at SGU</div>
             <div class="card_contact">
                 <span>
-                    <a href="https://www.facebook.com/profile.php?id=100009833357572" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/quan.truong.16568548" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 </span>
                 <span>
                     <a target="_blank"><i class="fab fa-instagram"></i></a>
@@ -140,11 +142,11 @@
 </div>
 </div>
     <!--------------------------------------------------INTRODUCTION HTML------------------------------------------------------>
-        <div class="introduction">
+        <div id="introductionid" class="introduction">
             <div class="introduction-title">
                 INTRODUCTION
             </div>
-            <div class="introduction-step">
+            <!-- <div class="introduction-step">
                 <div>
                     <span>
                         Step 1
@@ -157,13 +159,43 @@
                 </div>
                 <div>
                     <span>
-                        Step 3
+                        continue....
                     </span>
                 </div>
-            </div>
+            </div> -->
         </div>  
-        <div class="footer">
-            
+        <div id="contactid" class="footer">
+            <div class="teamInfo">
+                <div class="teamInfo-name">
+                    ALL YOUR MUSIC
+                </div>
+                <div class="teamInfo-info">
+                    Welcome to our small web development team at Saigon University! We are a group of 3 students who are passionate about creating high-quality websites and web applications. Our goal is to work collaboratively to produce functional, visually appealing, and user-friendly websites for our clients. This document will provide you with an overview of our team and how we work.
+                </div>
+            </div>
+            <div class="webInfo">
+                <div class="webInfo-all">
+                    <div>Links</div>
+                    <a href="#home">Home</a>
+                    <a href="">About us</a>
+                    <a href="">Introduction</a>
+                    <a href="">Contact</a>
+                </div>
+            </div>
+            <div class="contactInfo">
+                <div class="contactInfo-name">Contact us</div>
+                <div class="contactInfo-info">
+                    <div class="contactInfo-info_item">
+                        
+                    </div>
+                    <div class="contactInfo-info_item">
+
+                    </div>
+                    <div class="contactInfo-info_item">
+                        
+                    </div>
+                </div>
+            </div>
         </div>
 </body>
 </html>
