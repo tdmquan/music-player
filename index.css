@@ -302,6 +302,10 @@ a:hover{
 .contactInfo-name{
     font-size: 30px;
 }
+.contactInfo-info {
+    color: #fff;
+    width: 100%;
+}
 
 /* Slide */
 * {box-sizing: border-box}
