@@ -159,42 +159,73 @@
             </div>
         </div>
     </div>
-    <!--------------------------------------------------INTRODUCTION HTML------------------------------------------------------>
+    <!--------------------------------------------------INTRUCMENT HTML------------------------------------------------------>
     <div id="introductionid" class="introduction">
         <div class="introduction-title">
-            INTRODUCTION
+            INTRUCMENT
         </div>
+        <h1 class="hd-h1">Hướng dẫn dành cho window</h1 class="hd-h1">
+        <p class="install-window">Bước 1: Tải file về máy
+        Bước 2: Giải nén file
+        Bước 3: Chạy file project.exe
+        </p>
+        <h1 class="hd-h1">Hướng dẫn dành cho Linux</h1>
     </div>
     <div class="slideshow-container">
         <div class="mySlides fade">
+            <p class="install-linux">Bước 1: Giải nén tệp. 
+                Sau khi tải tệp từ website về, bạn vào bên trong thư mục đã lưu và giải nén.             
+                Bước 2: Vào terminal. 
+                Ubuntu thông thường sẽ được tích hợp sẵn Python3. Bạn có thể xem phiên bản hiện tại bằng lệnh python3 -V.</p>
             <img class="slide-img" src="Bước 1 và 2.png">
         </div>
 
         <div class="mySlides fade">
+            <p class="install-linux">Bước 3: Tải các thư viện cần thiết để chạy app. 
+                App nghe nhạc của nhóm cần 3 thư viện để hoạt động bao gồm: Tkinter, Pygame, Pillow.
+                A. Tải thư viện Tkinter. 
+                Bạn có thể tải thư viện này bằng lệnh: sudo apt install python3-tk.</p>
             <img class="slide-img" src="Bước 3.1.png">
         </div>
 
         <div class="mySlides fade">
+            <p class="install-linux">Sau khi tải xong. Bạn vào Python3 và import thư viện đồng thời xem phiên bản của thư viện Tkinter bằng các lệnh: 
+                import tkinter
+                tkinter.TkVersion</p>
             <img class="slide-img" src="Bước 3.2.png">
         </div>
 
         <div class="mySlides fade">
+            <p class="install-linux">B. Tải thư viện Pygame
+                Bạn có thể tải thư viện này bằng lệnh: sudo apt install python3-pygame.</p>
             <img class="slide-img" src="Bước 3.3.png">
         </div>
 
         <div class="mySlides fade">
+            <p class="install-linux">Sau khi tải xong, vào python3 để import Pygame đồng thời xem phiên bản của thư viện bằng lệnh: 
+                import pygame</p>
             <img class="slide-img" src="Bước 3.4.png">
         </div>
 
         <div class="mySlides fade">
+            <p class="install-linux">C. Tải thư viện Pillow
+                Các phiên bản gần đây của Ubuntu thường đã tích hợp sẵn thư viện Pillow.
+                Nếu chưa có thư viện này, có thể tải nó bằng lệnh: sudo apt install python3-pil</p>
             <img class="slide-img" src="Bước 3.5.png">
         </div>
 
         <div class="mySlides fade">
+            <p class="install-linux">Ngoài ra, bên trong file python còn cần import thêm ImageTk từ thư viện Pillow. Vì vậy để chắn chắn. 
+                Hãy dùng lệnh: sudo apt install python3-pil.imagetk
+                Để tải về ImageTK phòng trường hợp thư viện không có. </p>
             <img class="slide-img" src="Bước 3.6.png">
         </div>
 
         <div class="mySlides fade">
+            <p class="install-linux">Bạn có thể vào python3 và lần lượt nhập các lệnh: 
+                import PIL
+                PIL.__version__
+                Để có thể xem phiên bản hiện tại của thư viện Pillow</p>
             <img class="slide-img" src="Bước 3.7.png">
         </div>
 
@@ -203,6 +234,9 @@
         </div>
 
         <div class="mySlides fade">
+            <p class="install-linux">Bước 4: Chạy app. 
+                Cài đặt xong 3 thư viện trên thì đã có thể sử dụng app. 
+                Dùng lệnh cd để vào đường dẫn chứa file .py và chạy nó bằng python3. </p>
             <img class="slide-img" src="Bước 4.png">
         </div>
 
@@ -244,7 +278,7 @@
                 <div>Links</div>
                 <a href="#home">Home</a>
                 <a href="#aboutusid">About us</a>
-                <a href="#introductionid">Introduction</a>
+                <a href="#introductionid">Intrucment</a>
                 <a href="#contactid">Contact</a>
             </div>
         </div>
