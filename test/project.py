@@ -32,15 +32,39 @@ ButtonResume=Image.open("music/resumeMusic.png")
 ButtonRandom=Image.open("music/random.png")
 ButtonPLaylist=Image.open("music/playlist.png")
 ButtonOpenFile=Image.open("music/openFile.png")
+ButtonOpenFolder=Image.open("music/openFolder.png")
 #...........
 mixer.init()
 pygame.init()
-# Create a function to open a file
+def AddMusicFolder():
+    
+    path = filedialog.askdirectory()
+    if path:
+        os.chdir(path)
+        songs = os.listdir(path)
+
+        for song in songs:
+            flag=False
+            if song.endswith(".mp3")  or song.endswith(".wav") or song.endswith(".flac") :
+                for i in range(0,Playlist.size()):
+                    if(song==Playlist.get(i)):
+                        flag=True
+                if flag==False:
+                    Playlist.insert(END, song)
+
 def AddMusic():
+    flag=False
     path = filedialog.askopenfilename()
     print(path)
-    if path.endswith(".mp3") or path.endswith(".wav") or path.endswith(".flac") :
-    	Playlist.insert(END,path)
+    songpath=os.path.dirname(path)
+    os.chdir(songpath)
+    song=os.path.basename(path)
+    if song.endswith(".mp3") or song.endswith(".wav") or song.endswith(".flac") :
+        for i in range(0,Playlist.size()):
+            if(song==Playlist.get(i)):
+                flag=True
+        if flag==False:
+            Playlist.insert(END,song)
 #----------------PlaylistSong----------------------------------------------------------- 	
 def PlayListSong():
     global allstop
@@ -97,7 +121,7 @@ def PlayRandomSong():
     allstop=False
     x=0
     num_items = Playlist.size()
-    if num_items > 1:
+    if num_items > 0:
         while not allstop:
             if allstop:
                  break
@@ -277,7 +301,7 @@ buttonpause.bind("<Enter>",lambda event:button_hover(buttonpause,ButtonPause))
 buttonpause.bind("<Leave>",lambda event:button_leave(buttonpause,ButtonPause))
 #-------------------------------------VOLUME SLIDER---------------
 myVolume=("Helvetica",10)
-VolumeLabel=Label(root,text="Volume: 0",bg="#7e36b4",fg="white",font=myVolume)
+VolumeLabel=Label(root,text="Volume: 100",bg="#7e36b4",fg="white",font=myVolume)
 VolumeLabel.place(x=382,y=515)
 Volume_slider=tk.Scale(root,from_=100,to=0,orient=VERTICAL,bd=5,bg="#7e36b4",troughcolor="#3b1434",width=8,sliderlength=10,length=120,fg="White",highlightbackground="#7e36b4",showvalue=False,command=lambda event: set_volume(VolumeLabel,Volume_slider))
 Volume_slider.place(x=400,y=380)
@@ -298,6 +322,10 @@ Frame_Music.place(x=482, y=388, width=370, height=130)
 ButtonOpenFile1 =ImageTk.PhotoImage(ButtonOpenFile)
 buttonopen=Button(root, image=ButtonOpenFile1, bg="#3a1433", bd=0,highlightbackground="#3a1433",activebackground="#3a1433",cursor="hand2", command=AddMusic)
 buttonopen.place(x=420,y=300)
+
+ButtonOpenFolder =ImageTk.PhotoImage(ButtonOpenFolder)
+buttonopen=Button(root, image=ButtonOpenFolder, bg="#3a1433", bd=0,highlightbackground="#3a1433",activebackground="#3a1433",cursor="hand2", command=AddMusicFolder)
+buttonopen.place(x=380,y=300)
 #-------------------BUTTON RANDOM-----------------------------------------
 ButtonRandom1 =ImageTk.PhotoImage(ButtonRandom)
 buttonrandom=Button(root, image=ButtonRandom1, bg="#3a1433", bd=0,highlightbackground="#3a1433",activebackground="#3a1433",cursor="hand2", command=PlayRandomSong)
